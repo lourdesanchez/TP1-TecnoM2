@@ -93,7 +93,7 @@ void draw () {
     long momentoActual = millis ();
     
     if (momentoActual > marcaDeTiempo + umbralTiempo2) {
-      if (agudoYalto) {
+      if (agudoYalto){
         t.trazos(paleta.darColorPaletaUno(), 220, 200, 255 );
         println ("agudo y alto");
       } 

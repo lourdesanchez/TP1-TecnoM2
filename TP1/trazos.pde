@@ -1,7 +1,7 @@
 class Trazos {
   PImage []  trazos;
   int cantidad;
-  int cantTrazosLargos = 5;
+  int cantTrazosLargos = 1;
   int ancho, alto;
   int opacidad;
   String estado;
@@ -11,7 +11,7 @@ class Trazos {
   float y;
 
   Trazos () {
-    cantidad = 5;
+    cantidad = 1;
     ancho = 220;
     alto = 300;
     opacidad = 200;
@@ -27,7 +27,7 @@ class Trazos {
       trazos[i].filter ( INVERT );
     }
   }
-
+  
   void trazos(int tint, int ancho, int alto, int tranps){ //estos valores se los paso en la clase TP1
    translate (-100, -110);
     for (int i = 0; i < cantidad; i++) {
@@ -48,7 +48,7 @@ class Trazos {
     if (estado.equals ("inicio")) {
       contador++;
     } 
-    if (contador >= 200) {
+    if (contador >= 500) {
       estado = "fin";
       contador = 0;
       cantidad = 0;
@@ -64,8 +64,8 @@ class Trazos {
   
   void reiniciarObra(){
     estado = "inicio";
-    cantidad = 5;
-    cantTrazosLargos = 5;
+    cantidad = 1;
+    cantTrazosLargos = 1;
   }
   
 }
